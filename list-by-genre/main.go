@@ -22,7 +22,7 @@ var CorsHeaders = map[string]string{
 	"Access-Control-Allow-Origin":      "*",
 	"Access-Control-Allow-Credentials": "true",
 	"Access-Control-Allow-Headers":     "Content-Type,Authorization",
-	"Access-Control-Allow-Methods":     "PUT, POST, GET, DELETE, OPTIONS",
+	"Access-Control-Allow-Methods":     "PUT, POST, GET, DELETE, OPTIONS, ANY",
 }
 
 type Request struct {
