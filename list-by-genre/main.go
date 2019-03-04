@@ -34,10 +34,17 @@ type MovieDBResponse struct {
 }
 
 type Movie struct {
-	Title       string `json:"title"`
-	Description string `json:"overview"`
-	Cover       string `json:"poster_path"`
-	ReleaseDate string `json:"release_date"`
+	ID          int     `json:id`
+	Title       string  `json:"title"`
+	Description string  `json:"overview"`
+	Cover       string  `json:"poster_path"`
+	ReleaseDate string  `json:"release_date"`
+	Runtime     int     `json:"runtime"`
+	VoteAverage float64 `json:"vote_average"`
+	Genres      []struct {
+		ID   int    `json:"id"`
+		Name string `json:"name"`
+	} `json:"genres"`
 }
 
 func Handler(request Request) (events.APIGatewayProxyResponse, error) {
